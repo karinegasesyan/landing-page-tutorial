@@ -1,0 +1,123 @@
+
+// Border Radius
+@mixin border-r($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+
+  @mixin border-rtl($radius) {
+    -webkit-border-top-left-radius: $radius;
+        -moz-border-radius-topleft: $radius;
+            border-top-left-radius: $radius;
+  }
+
+  @mixin border-rtr($radius) {
+    -webkit-border-top-right-radius: $radius;
+        -moz-border-radius-topright: $radius;
+            border-top-right-radius: $radius;
+  }
+
+  @mixin border-rbl($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+        -moz-border-radius-bottomleft: $radius;
+            border-bottom-left-radius: $radius;
+  }
+
+  @mixin border-rbr($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+        -moz-border-radius-bottomright: $radius;
+            border-bottom-right-radius: $radius;
+  }
+
+// Transition Animation
+
+  @mixin animate-element($applyto,$transition) {
+    -webkit-transition: $applyto $transition ease;
+       -moz-transition: $applyto $transition ease;
+         -o-transition: $applyto $transition ease;
+        -ms-transition: $applyto $transition ease;
+            transition: $applyto $transition ease;
+  }
+
+// Width
+
+  @mixin calc-width($width,$action,$pixels) {
+      width: -webkit-calc( #{$width} #{$action} #{$pixels} );
+         width: -moz-calc( #{$width} #{$action} #{$pixels} );
+              width: calc( #{$width} #{$action} #{$pixels} );
+  }
+
+// Height
+
+  @mixin calc-height($width,$action,$pixels) {
+      height: -webkit-calc( #{$width} #{$action} #{$pixels} );
+         height: -moz-calc( #{$width} #{$action} #{$pixels} );
+              height: calc( #{$width} #{$action} #{$pixels} );
+  }
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+//transition
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+// rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+// translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+// skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+/***** Responsive breakpoints*****/
+
+//media querry for 1024px
+@media(min-width: 64em){
+  //style
+}
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium":"40em", "large":"64em", "xlarge":"87.5em");
+//639px, 1023px, 1399px
+$breakpoints-down: ("small":"39.9375em","medium":"63.9375em", "large":"87.4375em");
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+   @content; 
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+   @content; 
+  }
+}

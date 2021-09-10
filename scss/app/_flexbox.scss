@@ -1,0 +1,53 @@
+/*flexbox*/
+/*Flexbox SASS mixins*/
+
+.flex{
+    display: flex;
+    &__wrap{
+        flex-wrap: wrap;
+    }
+    &__col{
+        flex-direction: column;
+    }
+      
+    &__row{
+        flex-direction: row;
+    }
+    &__reverse{
+        flex-direction: row-reverse;
+    }
+    &__grow{
+        flex-grow: 1;
+        min-width: 1px;
+    }
+    &__shrink{
+        flex-shrink: 0;
+    }
+    &__1 {
+        flex: 1;
+    }
+    &__aln-start{
+        align-items: flex-start;
+    }
+    &__aln-center{
+        align-items: center;
+    }  
+    &__aln-end{
+        align-items: flex-end;
+    }
+    &__jfy-start{
+        justify-content: flex-start;
+    }  
+    &__jfy-center{
+        justify-content: center;
+    }
+    &__jfy-end{
+        justify-content: flex-end;
+    }  
+    &__jfy-between{
+        justify-content: space-between;
+    }  
+    &__jfy-around{
+        justify-content: space-around;
+    }
+  }

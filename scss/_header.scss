@@ -1,0 +1,97 @@
+.header{
+    nav{
+        padding:18px 24px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1);
+    }
+    &__logo{
+        img{
+            width: 8.8215rem;
+            height: 1.375rem;
+        }
+    }
+    &__menu{
+        > span{
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+            transform: all 300ms ease-in-out;
+            transform-origin: 4px 1px;
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &__links{
+        a{
+            position: relative;
+            font-size: $font-sm;
+            color: $grayisBlue;
+            font-weight: 400;
+            transition: color 300ms ease-in-out;
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+            &::before{
+                content: ' ';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 3px;
+                left: 0;
+                right: 0;
+                bottom: -34px;
+                background: linear-gradient(to right, $lineGreen, $brightCyen);
+                opacity: 0;
+            }
+
+            &:hover{
+                color: $darkBlue;
+                &::before{
+                    transition: opacity 300ms ease-in-out;
+                    opacity: 1;
+                }
+            }
+            
+        }
+    }
+    &__btn{
+        padding: 0.875rem 2.1875rem;
+        background: linear-gradient(to right, $lineGreen, $brightCyen);
+        color: $white;
+        font-size: $font-sm;
+        @include border-r(24px);
+        transition: opacity 300ms ease-in-out;
+        opacity: .75;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &.open {
+        .overlay {
+            display: block;
+        }
+        .header__menu {
+            > span:first-child {
+                @include transform(rotate(45deg));
+            }
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+            > span:last-child {
+                @include transform(rotate(-45deg));
+            }
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient($darkBlue, transparent);
+    display: none;
+}
