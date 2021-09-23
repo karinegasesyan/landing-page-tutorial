@@ -4,16 +4,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Website</title>
+        <title>Easybank landing page</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
         <link rel="stylesheet" href="./dist/reset.css">
         <link rel="stylesheet" href="./dist/main.css">
     </head>
 
     <body>
         <div class="main-content">
-            <header class="header container">
-                <div class="overlay"></div>
-                <nav class="flex flex__jfy-center flex__aln-center">
+            <header class="header">
+                <div class="overlay has-fade"></div>
+                <nav class="container container--pall flex flex__jfy-center flex__aln-center">
                     <a href="" class="header__logo">
                         <img src="images/logo.svg" alt="easybank">
                     </a>
@@ -32,31 +33,38 @@
                     </div>
                     <a href="#" class="btn header__btn hide-for-mobile"> Request Invite </a>
                 </nav>
+                <div class="header__menu has-fade flex flex__col flex__jfy-center flex__aln-center  hide-for-desktop">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                </div>
             </header>
             
-            <section class="container content-wrap">
-                <article>
-                    <a href="https://facebook.com/">facebook</a>
-                    <header>
-                        <h2>Article title</h2>
-                        <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-                    </header>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </article>
-                
-                <article>
-                    <header>
-                        <h2>Article title</h2>
-                        <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-                    </header>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </article>
-                
-                
+            <section class="banner">
+                <div class="container flex flex__col flex__aln-center">
+                    <div class="banner__img"></div>
+                    <div class="banner__text container container--pall">
+                        <h1> Next generation digital banking </h1>
+                        <p> Take your financial life online. Your Easybank account will be a one-stop-shop 
+                            for spending, saving, budgeting, investing, and much more. </p>
+                        <a href="#" class="btn"> Request Invite </a>
+                    </div>
+                </div>    
             </section>
-            <footer>
+            <section class="features">
+                <div class="container">
+                    <div class="main-sections-title">
+                        <h2>Why choose Easybank?</h2>
+                        <p>We laverage Open Banking to turn your bank account into your financial hub.</p>
+                        <p>Control your fiances like never before. </p>
+                    </div>
+                </div>
+            </section>
+            <!-- <footer>
                 <p>Copyright 2009 Your name</p>
-            </footer>
+            </footer> -->
         </div>
         
         <script type="text/javascript"  src="js/main.js"></script>

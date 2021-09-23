@@ -8,12 +8,12 @@
         opacity: 0;
     }
     to {
+        visibility: visible;
         opacity: 1;
     } 
 }
 .fade-in{
-    animation: fade-in 300ms ease-in-out forwards;
-    z-index: 9;
+    animation: fade-in 200ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -31,6 +31,8 @@
     } 
 }
 .fade-out{
-    animation: fade-out 300ms ease-in-out forwards;
-    z-index: 1;
+    animation: fade-out 200ms ease-in-out forwards;
+}
+.has-fade{
+    visibility: hidden;
 }
