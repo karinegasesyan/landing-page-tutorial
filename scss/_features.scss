@@ -1,0 +1,43 @@
+.feature{
+    background-color: $lightGrayisBlue;
+    padding: 84px 0;
+    &__grid{
+        padding-top: 64px;
+        line-height: 1.4;
+        @include breakpoint-down(medium){
+            flex-direction: column;
+        }
+    }
+    &__item{
+        h5{
+            font-size: 24px;
+            font-weight: 500;
+            color: $darkBlue;
+            margin-bottom: 16px;
+        }
+        p{
+            font-size: 16px;
+        }
+        &:not(:first-child){
+            padding-left: 32px;
+        }
+        @include breakpoint-down(medium){
+            text-align: center;
+            &:not(:first-child){
+                padding-left: 0;
+            } 
+        }
+    }
+    &__icon{
+        img{
+            width: 80px;
+            height: 80px;
+            margin-bottom: 32px;
+            @include breakpoint-down(medium){
+                width: 64px;
+                height: 64px;
+                margin: 24px 0;
+            }
+        }
+    }
+}

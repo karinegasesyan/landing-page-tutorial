@@ -16,6 +16,15 @@ body{
         font-size: $font-lg;
     }
 }
+
+.main-content{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.content-wrap{
+    padding-bottom: 100px;// footer height
+}
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -76,4 +85,25 @@ button,
     @include breakpoint-up(large){
         display: none;
     }   
+}
+.main-sections-title{
+    line-height: 1.4;
+    @include breakpoint-down(medium){
+        text-align: center;
+    }
+    h2{
+        color: $darkBlue;
+        font-size: $font-mlg;
+        font-weight: 500;
+        margin-bottom: 1.25rem;
+        @include breakpoint-down(medium){
+            font-size: 24px;
+        }
+    }
+    p{
+        font-size: $font-lg;
+        @include breakpoint-down(medium){
+            font-size: 14px;
+        }
+    }
 }
